@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Raiyan Ahmed Tauhid</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Welcome Page -->
+    <div class="welcome-page">
+        <h1>Hello! I'm Raiyan Ahmed Tauhid</h1>
+        <p>Welcome to my website. It's a portfolio website about me. Hope you will have a nice experience knowing about me.</p>
+        <button class="start-button" onclick="navigateToMainSite()">Let's start a nice journey</button>
+    </div>
+
+    <!-- Main Pages Container -->
+    <div class="main-content" style="display:none">
+        <!-- Menu -->
+        <nav class="curved-menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="skill.html">Skills</a></li> <!-- Updated link to skills.html -->
+                <li><a href="#hobby.html">Hobby</a></li>
+                <li><a href="#contact.html">Contact</a></li>
+                <li><a href="#feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+
+        <!-- Home Page -->
+        <section id="home">
+            <h2>Welcome to My Website!</h2>
+            <div class="profile-container">
+                <img src="https://i.postimg.cc/jjHHTN9Y/download.jpg" alt="Your Picture" class="profile-pic">
+                <h3>Raiyan Ahmed Tauhid</h3>
+            </div>
+            <blockquote class="quote">"Don't give up your dream, keep sleeping- Raiyan Ahmed Tauhid"</blockquote>
+
+            <div class="special-thanks">
+                <p>Special thanks to them, the first visitors and feedbackers of this site:</p>
+                <div class="thanks-person-box">
+                    <img src="https://i.postimg.cc/mZCBWWQ9/464589118-122182141754083438-6088978634684141215-n.jpg" alt="Ahmed Farhan Sammo">
+                    <p>Ahmed Farhan Sammo</p>
+                    <p>Professional gamer (ipsc)</p>
+                </div>
+                <div class="thanks-person-box">
+                    <img src="https://i.postimg.cc/3Jh7KfBc/unnamed.jpg" alt="Sayeda Juliya Naira Hasan">
+                    <p>Juliya Naira Hasan.</p>
+                    <p>...</p>
+                </div>
+                <div class="thanks-person-box">
+                    <img src="https://i.postimg.cc/43YR8Dfm/download.jpg" alt="Siblul Hasan">
+                    <p>Siblul Hasan</p>
+                    <p>Gamer and tech enthusiast (ipsc)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer with Secret Access -->
+        <footer>
+            <button class="secret-button" onclick="showPasswordPrompt()">&copy; All rights reserved to Raiyan Ahmed Tauhid</button>
+        </footer>
+    </div>
+
+    <!-- Secret Page -->
+    <div class="secret-page" style="display:none">
+        <nav class="curved-menu">
+            <ul>
+                <li><a href="#" onclick="navigateToHome()">Home</a></li>
+            </ul>
+        </nav>
+        <h2>This is a secret page to confess my emotion.</h2>
+        <p>It's for my love Sayeda Juliya Naira Hasan Goongoon</p>
+       <p><strong>সাইয়েদা জুলিয়া নায়রা হাসান গুনগুন আমার জীবনের প্রথম ভালোবাসা । ২০২৩ সালের জানুয়ারি মাসে তাকে আমি প্রথম দেখি ও প্রথম বারেই তার হাসির সৌন্দর্যে আমি পাগল হই। তারপর অনেক দিন তাকে আমি দেখিনাই।
+ সবশেষ ২০২৪ সালের "ইংলিশ অলিম্পিয়াড " এর অনুষ্ঠানে ইস্পাহানি পাবলিক স্কুল ও কলেজ থেকে আমরা সিএ (campus ambassador) হিসেবে মনোনিত হই। সেখানে তার সাথে আমার ভালো সম্পর্ক হয়।
+ আমি জানি সে আমার কখনো হবে না । সে এক ভাইয়ের সাথে রিলেশনে ছিলো তা আমি জেনেছি তার ফেসবুক স্টোরি থেকে । আসলে যারা দেহের জন্য কাউকে ভালোবাসে, তারাই সবসময় জিতে যায়। হেরে যায় তারাই যারা মায়ায় পড়ে ভালোবাসে।  তারপরও আমি তাকে মন থেকে ভালোবাসি । আমি জানি এটা আমার মন থেকে ভালোবাসা । সে চিরকাল আমার মনে থাকবে ।হয়তো সে আমার মনের ভেতর গুনগুন করবে চিরকাল। আমি তোমাকে চিরকাল ভালোবাসবো গুনগুন।</strong></p>
+        <div class="gallery">
+            
+            <img src="https://i.postimg.cc/TYQ8TdhK/download.jpg" alt="Gallery Image 4">
+            <h2> here you can get her pics </h2>
+                <p><strong>Check the link of Drive to check her pictures:</strong> 
+   <a href="https://drive.google.com/drive/folders/1Wx5cIk4sG1XoYALLWtLDdiCNE2dPJw4i?usp=sharing target="_blank">Click here to view her photos(DRIVE FILE)</a>
+</p>
+        </div>
+    </div>
+
+    <!-- Password Popup -->
+    <div id="password-popup" class="popup" style="display:none">
+        <h3>Enter Password to Access Secret Page</h3>
+        <input type="password" id="password-input" maxlength="8" placeholder="Enter 8-digit password">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+
+    <script>
+        function navigateToMainSite() {
+            document.querySelector('.welcome-page').style.display = 'none';
+            document.querySelector('.main-content').style.display = 'block';
+        }
+
+        function showPasswordPrompt() {
+            document.getElementById('password-popup').style.display = 'block';
+        }
+
+        function checkPassword() {
+            const enteredPassword = document.getElementById('password-input').value;
+            const correctPassword = "goongoon"; // Set your 8-digit password here
+
+            if (enteredPassword === correctPassword) {
+                document.querySelector('.main-content').style.display = 'none';
+                document.querySelector('.secret-page').style.display = 'block';
+                document.getElementById('password-popup').style.display = 'none';
+            } else {
+                alert("Incorrect password.");
+            }
+        }
+
+        function navigateToHome() {
+            document.querySelector('.secret-page').style.display = 'none';
+            document.querySelector('.main-content').style.display = 'block';
+        }
+
+        const menuLinks = document.querySelectorAll('.curved-menu a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                menuLinks.forEach(item => item.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
